@@ -1,0 +1,50 @@
+/* .dashboard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.teahcer{
+    background-color: blueviolet;
+    width: 300px;
+} */
+
+/* .flex{
+    display: flex;
+    border: 1px solid red;
+    justify-content: space-around;
+    align-items: center ;
+}
+.hello{
+    background-color: aqua;
+    height: 90vh;
+}
+.world{
+    background-color: blueviolet    ;
+    height: 90vh;
+} */
+/* Add this CSS to your stylesheet */
+.star-rating {
+  unicode-bidi: bidi-override;
+  font-size: 20px; /* Adjust the font size as needed */
+  display: inline-block;
+}
+
+.star-rating span {
+  display: inline-block;
+  position: relative;
+  width: 1em; /* Adjust the width as needed */
+}
+
+.star-rating span:before {
+  content: "★";
+  position: absolute;
+  color: #ffd700; /* Set the color of filled stars */
+  overflow: hidden;
+  width: 0;
+}
+
+/* Adjust the color of unfilled stars */
+.star-rating span:after {
+  content: "★";
+  color: #e4e4e4; /* Set the color of unfilled stars */
+}

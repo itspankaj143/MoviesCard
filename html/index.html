@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .star-rating {
+        display: inline-block;
+        font-size: 0;
+      }
+
+      .star-rating:before {
+        content: "★";
+        font-size: 24px;
+        color: #ccc;
+      }
+
+      .star-rating[data-rating="1"]:before {
+        color: gold;
+      }
+
+      .star-rating[data-rating="2"]:before {
+        color: gold;
+      }
+
+      .star-rating[data-rating="3"]:before {
+        color: gold;
+      }
+
+      .star-rating[data-rating="4"]:before {
+        color: gold;
+      }
+
+      .star-rating[data-rating="5"]:before {
+        color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="star-rating" data-rating="3"></div>
+    <div id="starRatingContainer"></div>
+
+    <script>
+      //   // Get all elements with class 'star-rating'
+      //   const starRatings = document.querySelectorAll(".star-rating");
+
+      //   starRatings.forEach((starRating) => {
+      //     const rating = parseFloat(starRating.getAttribute("data-rating"));
+      //     starRating.style.setProperty("--rating", rating);
+      //   });
+
+      function generateStarRating(rating) {
+        const starRatingContainer = document.getElementById(
+          "starRatingContainer"
+        );
+        starRatingContainer.innerHTML = "";
+
+        for (let i = 0; i < 5; i++) {
+          const star = document.createElement("span");
+          star.className = "star";
+          if (i < rating) {
+            star.innerHTML = "★"; // Filled star
+          } else {
+            star.innerHTML = "☆"; // Empty star
+          }
+          starRatingContainer.appendChild(star);
+        }
+      }
+
+      // Example rating value
+      const rating = 2.3; // Replace this with your dynamic rating value
+
+      // Generate star rating based on the rating value
+      generateStarRating(rating);
+    </script>
+  </body>
+</html>
